@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="CCStock : A Niubility China Stock Tools">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>CCStock</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/subler/ccstock">View on GitHub</a>
+
+          <h1 id="project_title">CCStock</h1>
+          <h2 id="project_tagline">A Niubility China Stock Tools</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/subler/ccstock/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/subler/ccstock/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="linux平台下的a股神器" class="anchor" href="#linux%E5%B9%B3%E5%8F%B0%E4%B8%8B%E7%9A%84a%E8%82%A1%E7%A5%9E%E5%99%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linux平台下的A股神器</h2>
+
+<h3>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h3>
+
+<p><img src="demo/demo.gif" alt="ccstock.gif"></p>
+
+<h3>
+<a id="依赖列表" class="anchor" href="#%E4%BE%9D%E8%B5%96%E5%88%97%E8%A1%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>依赖列表</h3>
+
+<p>使用C++(11)开发,第三方库如下:</p>
+
+<ol>
+<li>Boost</li>
+<li>libcurl</li>
+<li>libev</li>
+<li>ncurses(w)</li>
+<li>LevelDB</li>
+</ol>
+
+<h3>
+<a id="编译" class="anchor" href="#%E7%BC%96%E8%AF%91" aria-hidden="true"><span class="octicon octicon-link"></span></a>编译</h3>
+
+<p><code>build/bin/</code>下有编译好的程序,手动编译如下:</p>
+
+<ol>
+<li><code>mkdir build</code></li>
+<li><code>cd build</code></li>
+<li><code>cmake ../</code></li>
+<li><code>make</code></li>
+</ol>
+
+<h3>
+<a id="使用指南" class="anchor" href="#%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用指南</h3>
+
+<p><strong>数据位置</strong></p>
+
+<pre><code>build/bin/data/code
+</code></pre>
+
+<p>自选股/大盘所有股票存放(可在配置文件中更改)</p>
+
+<p><strong>命令大全</strong></p>
+
+<pre><code>-h [ --help ]         显示帮助信息
+-a [ --code ] arg     查看个股信息，代码用','分开
+-c [ --config ] arg   设置配置XML配置文件(示例:build/bin/ccstock.xml)
+-d [ --data ] arg     显示板块行情(板块名称sh/sz/cyb/zxb/all)
+-m [ --market ]       显示大盘行情(沪市/深市/中小板/创业板)
+-t [ --top ] arg      筛选前几个信息(--top 10, 根据排序规则)
+-o [ --order ] arg    排序规则如下：
+                      xj    现价(高到低,下同)
+                      zdf   涨跌幅
+                      cjl   成交量
+                      cje   成交额
+                      xji   现价(低到高,下同)
+                      zdfi   涨跌幅
+                      cjli   成交量
+                      cjei   成交额
+--add-option arg      追加自选股,股票代码用','分开
+--del-option arg      删除自选股,股票代码用','分开
+-O [ --show-option ]  查看自选股
+</code></pre>
+
+<p>查看创业板(cyb)现价前20的股票</p>
+
+<pre><code>./ccstock -c ccstock.xml -d cyb -t 20 -o xj
+</code></pre>
+
+<h3>
+<a id="版本更新" class="anchor" href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>版本更新</h3>
+
+<h4>
+<a id="2015-08-01-verion-03" class="anchor" href="#2015-08-01-verion-03" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-08-01. Verion 0.3</h4>
+
+<ol>
+<li>增加<code>DataCenter</code>模块，获取数据(历史数据)</li>
+<li>修正部分bug</li>
+</ol>
+
+<h4>
+<a id="2015-07-13-verion-02" class="anchor" href="#2015-07-13-verion-02" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-07-13. Verion 0.2</h4>
+
+<ol>
+<li>增加通过简拼查询功能</li>
+<li>加入ncurses实时刷新 </li>
+<li>完善错误处理</li>
+</ol>
+
+<h4>
+<a id="2015-07-01-verion-01" class="anchor" href="#2015-07-01-verion-01" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-07-01. Verion 0.1</h4>
+
+<ol>
+<li>实现基本行情查看</li>
+</ol>
+
+<p></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">CCStock maintained by <a href="https://github.com/subler">subler</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
