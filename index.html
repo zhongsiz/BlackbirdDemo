@@ -1,96 +1,157 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="description" content="Blackbird : A Niubility China Stock Tools">
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        <title>Blackbird-A Nuibility China Stock Tool</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+                <a id="forkme_banner" href="https://github.com/subler/Blackbird">View on GitHub</a>
+                <h1 id="project_title">Blackbird</h1>
+                <h2 id="project_tagline">A Niubility China Stock Tool</h2>
+                <section id="downloads">
+                    <a class="zip_download_link" href="https://github.com/subler/Blackbird/zipball/master">Download this project as a .zip file</a>
+                    <a class="tar_download_link" href="https://github.com/subler/Blackbird/tarball/master">Download this project as a tar.gz file</a>
+                </section>
+            </header>
+        </div>
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h2>
+                    <a id="a股神器" class="anchor" href="stock" aria-hidden="true">
+                        <span class="octicon octicon-link"></span>
+                    </a>茁壮成长的A股神器
+                </h2>
+                <!-- Introduction -->
+                <div>
+                    Blackbird是一款A股神器，它由一系列命令行工具组成，支持Linux和Windows(Cygwin)平台。Blackbird目标如下:
+                </div>
+                    <ol style="padding-left:4em">
+                        <li>短期目标：辅助个人炒股</li>
+                        <li>长期目标</li>
+                            <ol>
+                                <li>量化分析</li>
+                                <li>自动交易</li>
+                            </ol>
+                    </ol>
+                <!-- notify -->
+                <p>
+                    <strong>Blackbird目前正处于起步阶段，欢迎有兴趣小伙伴加入(热爱前端(HTML/CSS/JS))，快来约<a href="mailto:zhongsizhi@foxmail.com">Steve Zhong</a>吧. We believe:</strong>
+                </p>
+                <div style="border:3px groove #EEE">
+                    <font style="font-style:oblique;">The past is gone and static. Nothing we can do will change it.<br>
+                    The future is before us and dynamic. Everything we do will affect it.</font>
+                </div>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Blackbird : A Niubility China Stock Tools">
+                <!-- Demo -->
+                <h3>
+                    <a id="demo" class="anchor" href="#demo" aria-hidden="true">
+                        <span class="octicon octicon-link"></span>
+                    </a>Demo
+                </h3>
+                <p>下图展示了查看中小板行情的界面:</p>
+                <p><img src="demo/demo.gif" alt="Blackbird.gif"></p>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+                <!--Q&A -->
+                <h3><a id="user-content-qa" class="anchor" href="#qa" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q &amp; A</h3>
+                <div>
+                    <p>
+                        <strong>问: </strong><font style="font-style:italic;">股票能用程序预测吗？</font><br>
+                        <strong>答: </strong>坚信技术的力量，有利于炒股，当然神器是终极目标，需要持久战
+                    </p>
+                    <p>
+                        <strong>问: </strong><font style="font-style:italic;">为什么用C++开发？</font><br>
+                        <strong>答: </strong>C++大家都会&&比较熟悉，目前工作也主用C++，由于Blackbird是副业且水平不够(2015年7月刚从三流学校混毕业)，所以进度比较慢。
+                    </p>
+                    <p>
+                        <strong>问: </strong><font style="font-style:italic;">你们还要人吗？</font><br>
+                        <strong>答: </strong>当然要
+                        <ol style="padding-left:4em">
+                            <li>C++很牛逼：暂时不需要，目前可以应付C++开发相关内容</li>
+                            <li><strong>热爱前端技术(HTML/CSS/Javascript）： 非常需要，爬虫，维护主页/文档。</strong></li>
+                            <li>会量化分析的(金融统计/数据挖掘等)： 未来需要</li>
+                        </ol>
+                    </p>
+                </div>
 
-    <title>Blackbird</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/subler/Blackbird">View on GitHub</a>
-
-          <h1 id="project_title">Blackbird</h1>
-          <h2 id="project_tagline">A Niubility China Stock Tool</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/subler/Blackbird/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/subler/Blackbird/tarball/master">Download this project as a tar.gz file</a>
+                <!-- Roadmap -->
+                <h3>
+                    <a id="最新进展" class="anchor" href="#%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95" aria-hidden="true">
+                    <span class="octicon octicon-link"></span></a>Roadmap
+                </h3>
+                <!-- Roadmap for 2015-09-01 -->
+                <h4>
+                    <a id="2015-09-01" class="anchor" href="#2015-09-01" aria-hidden="true">
+                    <span class="octicon octicon-link"></span></a>2015-09-01. Verion 0.4
+                </h4>
+                <ol>
+                    <li>增加<code>AS(Action Support)</code>模块，操盘小助手</li>
+                        <ol>
+                            <li>实时行情监控器。可自定义预警条件，若触发条件则自动通过邮件通知</li>
+                            <li>智能选股。基于历史交易数据的选股功能</li>
+                        </ol>
+                </ol>
+                <!-- Roadmap for 2015-08-01 -->
+                <h4>
+                    <a id="2015-08-01" class="anchor" href="#2015-08-01" aria-hidden="true">
+                    <span class="octicon octicon-link"></span></a>2015-08-01. Verion 0.3
+                </h4>
+                <ol>
+                    <li>增加<code>DC(DataCenter)</code>模块，获取数据</li>
+                    <ol>
+                        <li>获取股票代码/简拼信息</li>
+                        <li>获取历史交易数据</li>
+                    </ol>
+                </ol>
+                <!-- Roadmap for 2015-07-13 -->
+                <h4>
+                    <a id="2015-07-13" class="anchor" href="#2015-07-13" aria-hidden="true">
+                    <span class="octicon octicon-link"></span></a>2015-07-13. Verion 0.2
+                </h4>
+                <ol>
+                    <li>实现通过股票简拼查询行情</li>
+                    <li>实时行情刷新功能(见Demo)</li>
+                </ol>
+                <!-- Roadmap for 2015-07-01 -->
+                <h4>
+                    <a id="2015-07-01" class="anchor" href="#2015-07-01" aria-hidden="true">
+                    <span class="octicon octicon-link"></span></a>2015-07-01. Verion 0.1
+                </h4>
+                <ol>
+                    <li>实现基本行情(实时/当日)查询</li>
+                    <ol>
+                        <li>简单的筛选显示</li>
+                        <li>自选股管理</li>
+                    </ol>
+                </ol>
+                <!-- Roadmap for 2015-06-22 -->
+                <h4>
+                    <a id="2015-06-22" class="anchor" href="#2015-06-22" aria-hidden="true">
+                    <span class="octicon octicon-link"></span></a>2015-06-22. Blackbird启动
+                </h4>
+                <ol>
+                    <li>短期目标：辅助个人炒股</li>
+                    <li>长期目标</li>
+                        <ol>
+                            <li>量化分析</li>
+                            <li>自动交易</li>
+                        </ol>
+                </ol>
+                <p></p>
             </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
-<a id="linux平台下的a股神器" class="anchor" href="#linux%E5%B9%B3%E5%8F%B0%E4%B8%8B%E7%9A%84a%E8%82%A1%E7%A5%9E%E5%99%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>茁壮成长的A股神器</h2>
-
-<h3>
-<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h3>
-
-<p><img src="demo/demo.gif" alt="Blackbird.gif"></p>
-
-<pre>
-  <code>    The past is gone and static. Nothing we can do will change it.
-    The future is before us and dynamic. Everything we do will affect it.</code>
-</pre>
-
-<h3>
-<a id="最新进展" class="anchor" href="#%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>Roadmap</h3>
-
-<h4>
-<a id="2015-08-30" class="anchor" href="#2015-08-30" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-08-30.</h4>
-
-<ol>
-    <li>增加<code>AS</code>模块，操盘助手</li>
-        <ol>
-            <li>实时行情监控器</li>
-            <li>智能选股</li>
-        </ol>
-</ol>
-
-<h4>
-<a id="2015-08-01" class="anchor" href="#2015-08-01" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-08-01.</h4>
-
-<ol>
-<li>增加<code>DataCenter</code>模块，获取数据(历史数据)</li>
-<li>修正部分bug</li>
-</ol>
-
-<h4>
-<a id="2015-07-13" class="anchor" href="#2015-07-13" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-07-13.</h4>
-
-<ol>
-  <li>增加通过简拼查询功能</li>
-  <li>加入ncurses实时刷新 </li>
-</ol>
-
-<h4>
-<a id="2015-07-01-verion-01" class="anchor" href="#2015-07-01-verion-01" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-07-01</h4>
-
-<ol>
-<li>实现基本行情查看</li>
-</ol>
-
-<p></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Blackbird maintained by <a href="https://github.com/subler">Steve Zhong</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-  </body>
+        </div>
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p class="copyright">Blackbird maintained by <a href="mailto:zhongsizhi@foxmail.com">Steve Zhong</a></p>
+                <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+            </footer>
+        </div>
+    </body>
 </html>
