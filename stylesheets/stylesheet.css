@@ -360,9 +360,9 @@ Full-Width Styles
 }
 
 #main_content_wrap {
-  background: #f2f2f2;
+  background: #e9f0f5;
   border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
+  /*border-bottom: 1px solid #111;*/
 }
 
 #main_content {
@@ -372,6 +372,10 @@ Full-Width Styles
 #footer_wrap {
   background: #212121;
 }
+
+#footer{height:60px;background: #cbcbcb;}
+#footer p{ line-height:24px; text-align:center}
+#footer p a:hover{color:#51555C}
 
 
 
