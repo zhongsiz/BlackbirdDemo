@@ -1,0 +1,14 @@
+<stock>
+    <market_data>
+        <code>
+            <!-- 文件位置 -->
+            <code_path>data/code/</code_path>
+            <!-- 自选股文件位置 -->
+            <option_path>data/code/</option_path>
+            <!-- 历史数据文件位置 -->
+            <history_path>data/history/</history_path>
+        </code>
+        <!-- 爬虫每次请求的股票信息数 -->
+        <request_speed>300</request_speed>
+    </market_data>
+</stock>
