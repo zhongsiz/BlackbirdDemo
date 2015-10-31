@@ -1,5 +1,5 @@
 ##Blackbird-A股神器(A Niubility China Stock Tools)
-Blackbird是一款茁壮成长的A股神器，目前支持Linux和Windows(Cygwin)。
+Blackbird是一款茁壮成长的A股神器，目前支持Linux和Windows(Cygwin), 有任何建议或意见，欢迎联系[Steve](mailto:zhongsizhi@foxmail.com)。
 
 ###Demo -- 行情模拟器(mdsim)
 ![Blackbird.gif](demo/demo.gif)
@@ -18,7 +18,7 @@ Blackbird是一款茁壮成长的A股神器，目前支持Linux和Windows(Cygwin
     -O [ --show-option ]  查看自选股
 
 ### Blackbird计划与实现
-Blackbird是2015年A股大牛市和大熊市(2015-6-20号)而萌生一系列炒股想法的实现，它的目标如下:
+Blackbird是2015年A股大牛市和大熊市而萌生一系列炒股想法的实现(2015-06-20)，它的目标如下:
 
 1. 短期目标：辅助个人炒股
 2. 长期目标
@@ -71,9 +71,3 @@ Blackbird是2015年A股大牛市和大熊市(2015-6-20号)而萌生一系列炒�
             * [x] 平台登录
             * [x] 持股查询
             * [ ] 交易操盘
-
-欢迎有任何建议或意见，欢迎联系[Steve](mailto:zhongsizhi@foxmail.com)。
-
-
-
-
