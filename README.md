@@ -2,7 +2,7 @@
 Blackbird是一款茁壮成长的A股神器，目前支持Linux, 有任何建议或意见，欢迎联系[Steve](mailto:zhongsizhi@foxmail.com)。
 
 ### Demo -- 行情模拟器(mdsim)
-![Blackbird.gif](demo/demo.gif)
+![Blackbird.gif](demo/mdsim.gif)
 
 ### Build && Usage
 
@@ -17,7 +17,7 @@ Blackbird是一款茁壮成长的A股神器，目前支持Linux, 有任何建议
 
         `./mdsim -c mdsim.xml`
 
-`mdsim`用与查看实时行情，提供功能如下：
+**mdsim**用于查看实时行情，提供功能如下：
 
     -h [ --help ]         显示帮助信息
     -a [ --code ] arg     查看个股信息，代码用','分开

@@ -1,7 +1,5 @@
 build/*
 !build/bin/*.xml
-!build/bin/*.txt
-!build/bin/*.tpl
 !build/bin/*.ds
 .*.swp
 .*.swo
