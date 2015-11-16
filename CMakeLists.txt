@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.8.4)
 project (Blackbird)
 
 # 查找Boost头文件和链接库
-find_package (Boost REQUIRED COMPONENTS system filesystem program_options) 
+find_package (Boost REQUIRED COMPONENTS program_options) 
 if (Boost_FOUND)
     SET (BOOST_PATH ${Boost_INCLUDE_DIRS})
     SET (BOOST_LIB ${Boost_LIBRARY_DIRS})
@@ -43,7 +43,6 @@ INCLUDE_DIRECTORIES("${BOOST_PATH}")
 INCLUDE_DIRECTORIES("${CURL_PATH}")
 
 # 设置C++编译选项
-# SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wno-unused-variable -Wno-unused-function -O2 -std=c++11" )
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wno-unused-variable -Wno-unused-function -std=c++11" )
 
 # 编译类型为Debug

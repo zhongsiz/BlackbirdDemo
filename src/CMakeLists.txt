@@ -18,15 +18,9 @@ LINK_DIRECTORIES(
 SET(MDSIM_LIB
     inst
     sys
-    boost_system
-    boost_filesystem
     boost_program_options
     curl
     ${NCURSESW_LIB}
     )
 # 根据平台链接libev库
-IF (CYGWIN)
-    TARGET_LINK_LIBRARIES(mdsim ${MDSIM_LIB} ${LIBEV_LIB}/libev.a)
-ELSE (CYGWIN)
-    TARGET_LINK_LIBRARIES(mdsim ${MDSIM_LIB} ev)
-ENDIF(CYGWIN)
+TARGET_LINK_LIBRARIES(mdsim ${MDSIM_LIB} ev)

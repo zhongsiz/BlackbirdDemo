@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年07月04日 星期六 22时34分11秒
-*Last Modified: 2015年08月29日 星期六 13时48分02秒
+*Last Modified: 2015年11月17日 星期二 01时08分10秒
 *Purpose:
 **/
 
@@ -27,16 +27,8 @@ class code_db {
 public:
     // 配置数据
     bool configure(const std::string& code_path);
-    // 检查股票代码是否存在
-    bool check_code_exist_multi(const std::vector<std::string>& code_vec);
     // 将简拼转换为代码
     bool from_jp_to_code(std::vector<std::string>& vec);
-    // 检查单个股票代码是否存在
-    bool check_code_exist(const std::string& code);
-    // 获得股票名称
-    std::string get_name(const std::string& code);
-    // 股票数量
-    size_t code_size();
 private:
     // 股票信息内部类
     struct inner_stock_info {
@@ -56,17 +48,9 @@ private:
     static std::unordered_map<std::string, std::string> jp_code_map;
     // 股票简拼和相关信息映射
     static std::unordered_map<std::string, inner_stock_info> code_info_map;
-public:
-    // code_info_map开始迭代器
-    unordered_map<std::string, inner_stock_info>::const_iterator get_codeinfomap_begin()
-    {
-        return code_info_map.begin();
-    }
-    // code_info_map结束迭代器
-    unordered_map<std::string, inner_stock_info>::const_iterator get_codeinfomap_end()
-    {
-        return code_info_map.end();
-    }
+private:
+    // 检查单个股票代码是否存在
+    bool check_code_exist(const std::string& code);
 };
 
 }

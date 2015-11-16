@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年07月04日 星期六 23时57分03秒
-*Last Modified: 2015年09月12日 星期六 21时52分18秒
+*Last Modified: 2015年11月17日 星期二 01时19分06秒
 *Purpose: 自选股管理器
 **/
 
@@ -15,7 +15,6 @@
 
 #include <common/utility.h>
 #include <common/io/datautils.h>
-#include <common/io/fileutils.h>
 #include <common/instrument/stock.h>
 
 namespace simulator {
@@ -25,7 +24,6 @@ class option_manager {
     using self_type    = option_manager<code_db, md_crawler, displayer>;
     using utility      = common::utility;
     using datautils    = common::io::datautils;
-    using fileutils    = common::io::fileutils;
     using stock        = common::instrument::stock;
 private:
     // timer

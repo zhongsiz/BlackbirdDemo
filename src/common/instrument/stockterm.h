@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年06月22日 星期一 00时13分41秒
-*Last Modified: 2015年07月26日 星期日 20时11分29秒
+*Last Modified: 2015年11月17日 星期二 01时12分03秒
 *Purpose:
 **/
 
@@ -35,8 +35,6 @@ static const std::string cyb = "创业板";
 static const std::string zxb = "中小板";
 static const std::string sz  = "深市";
 static const std::string sh  = "沪市";
-
-enum class stock_type { SH, SZ };
 
 }
 

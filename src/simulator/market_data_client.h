@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年06月22日 星期一 00时13分41秒
-*Last Modified: 2015年09月12日 星期六 22时31分40秒
+*Last Modified: 2015年11月17日 星期二 01时22分22秒
 *Purpose:
 **/
 
@@ -22,7 +22,6 @@
 #include <common/logger.h>
 #include <common/utility.h>
 #include <common/configurator.h>
-#include <common/io/io_wrapper.h>
 #include <common/io/datautils.h>
 #include <common/instrument/stock.h>
 
@@ -35,7 +34,6 @@ private:
     using datautils     = common::io::datautils;
     using utility       = common::utility;
     using logger        = common::logger;
-    using iowrapper     = common::io::iowrapper;
     using stock         = common::instrument::stock;
     using stock_basic   = common::instrument::stock_basic;
     using market        = common::instrument::market;

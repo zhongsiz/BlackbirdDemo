@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年08月26日 星期三 23时49分23秒
-*Last Modified: 2015年09月12日 星期六 17时36分26秒
+*Last Modified: 2015年11月17日 星期二 01时21分53秒
 *Purpose: 代码/数据文件读写类
 **/
 
@@ -14,8 +14,6 @@
 
 #include "../utility.h"
 #include "../instrument/stock.h"
-#include "fileutils.h"
-#include "io_wrapper.h"
 
 namespace common {
 namespace io {
@@ -25,31 +23,6 @@ class datautils {
 	using stock       = common::instrument::stock;
     using stock_basic = common::instrument::stock_basic;
 public:
-	static bool save_code(std::vector<std::string>& code_vec, const std::string& dir_path, const std::string& fname)
-    {
-        fileutils::create_folder(dir_path.c_str());
-        ofstream ofs(dir_path + fname, ios::out);
-        for (auto code : code_vec) {
-            iowrapper::out_variadic(ofs, code);
-        }
-        ofs.close();
-        return true;
-    }
-    static bool save_code_jp_name(std::vector<stock_basic>& stock_basic_vec, const string& dir_path)
-    {
-        fileutils::create_folder(dir_path.c_str());
-        ofstream ofs(dir_path + "code_jp_name.ds", ios::out);
-        std::string data;
-        for (auto stock_basic : stock_basic_vec) {
-            iowrapper::out_variadic(ofs,
-                    stock_basic.code, " ",
-                    stock_basic.jp, " ",
-                    stock_basic.name, " ",
-                    stock_basic.market_code);
-        }
-        ofs.close();
-        return true;
-    }
     // 读股票代码数据
     static bool read_code_jp_name(std::vector<stock_basic>& stock_basic_vec, const string& dir_path)
     {

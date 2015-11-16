@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年09月02日 星期三 01时05分10秒
-*Last Modified: 2015年09月22日 星期二 09时44分16秒
+*Last Modified: 2015年11月17日 星期二 00时53分21秒
 *Purpose: libcurl wrapper
 **/
 #ifndef CRAWLER_IMPL_H_
@@ -57,31 +57,6 @@ public:
         }
         return "";
     }
-    // 下载文件
-    bool download(const string& url, const string& filename)
-    {
-        // 检查URL
-        if (check_url(url)) {
-            // 返回数据
-            FILE *fp = std::fopen(filename.c_str(), "w");
-            if (fp == nullptr) {
-                logger::log_info("创建文件[" + filename + "]失败");
-                return false;
-            }
-            // 设置libcurl选项
-            if (set_option_variadic(make_pair(CURLOPT_URL, url.c_str()),
-                    make_pair(CURLOPT_WRITEDATA, fp),
-                    make_pair(CURLOPT_WRITEFUNCTION, download_cb)))
-            {
-                // 获取数据
-                if (run()) {
-                    std::fclose(fp);
-                    return true;;
-                }
-            }
-        }
-        return false;
-    }
 private:
     // 写文本回调函数
     static size_t write_cb(char *ptr, size_t size, size_t nmemb, void *userdata) {
@@ -92,12 +67,6 @@ private:
         size_t len = size * nmemb;
         str->append(ptr, len);
         return len;
-    }
-    // 下载回调函数
-    static size_t download_cb(void *ptr, size_t size, size_t nmemb, FILE *stream)
-    {
-        size_t write_len = fwrite(ptr, size, nmemb, stream);
-        return write_len;
     }
 private:
     // 检查请求URL长度

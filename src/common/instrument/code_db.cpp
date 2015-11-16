@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年08月13日 星期四 23时31分09秒
-*Last Modified: 2015年08月29日 星期六 13时49分29秒
+*Last Modified: 2015年11月17日 星期二 01时07分02秒
 *Purpose:
 **/
 
@@ -33,16 +33,6 @@ bool code_db::check_code_exist(const string& code)
     return true;
 }
 
-bool code_db::check_code_exist_multi(const std::vector<std::string>& code_vec)
-{
-    for (auto code : code_vec) {
-        if (!check_code_exist(code)) {
-            return false;
-        }
-    }
-    return true;
-}
-
 bool code_db::from_jp_to_code(std::vector<std::string>& vec)
 {
     bool flag = true;
@@ -65,18 +55,6 @@ bool code_db::from_jp_to_code(std::vector<std::string>& vec)
     }
     return flag;
 }
-
-// 获得股票名称
-std::string code_db::get_name(const std::string& code)
-{
-    return code_info_map[code].name;
-}
-
-size_t code_db::code_size()
-{
-    return code_info_map.size();
-}
-
 
 }
 }

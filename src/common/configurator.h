@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年06月23日 星期二 22时30分03秒
-*Last Modified: 2015年11月16日 星期一 23时33分48秒
+*Last Modified: 2015年11月17日 星期二 01时42分22秒
 *Purpose: 配置器封装
 *    1. Boost::program_option封装
 *    2. Boost中xml解析器封装
@@ -30,18 +30,6 @@
 #include "infrastucture/uncopyable.h"
 
 namespace common {
-
-namespace {
-    // format program option description
-    std::string format_desc(std::string&& desc)
-    {
-        regex pattern_short("(-)([A-Z])");
-        regex pattern_full("(--)(\\w+)");
-        desc = regex_replace(desc, pattern_short, "$2");
-        desc = regex_replace(desc, pattern_full, "$2");
-        return desc;
-    }
-}
 
 namespace po = boost::program_options;
 namespace pt = boost::property_tree;
@@ -83,61 +71,6 @@ public:
             return false;
         }
         return true;
-    }
-private:
-    pt::ptree tree;
-};
-
-// json配置文件存储结构
-class json_config : private uncopyable {
-public:
-    // 解析配置文件
-    bool parse(const string& json_file_name)
-    {
-        pt::read_json(json_file_name, tree);
-        return true;
-    }
-    // 解析配置文件
-    bool parse_string(const string& json_string)
-    {
-        std::stringstream ss;
-        ss << json_string;
-        pt::read_json(ss, tree);
-        return true;
-    }
-    // 获取单节点值
-    template <typename T>
-    T get_value(const std::string& path, T)
-    {
-        try {
-            return tree.get<T>(path);
-        }
-        catch(pt::ptree_error& err) {
-            // 文件路径不存在
-            common::logger::parse_config_error(err.what());
-            exit(EXIT_FAILURE);
-        }
-        return T();
-    }
-    // 获取多节点值
-    template <typename T>
-    bool get_multi_value(const std::string& path, std::vector<T>& multi_val)
-    {
-        try {
-            for(auto vt : tree.get_child(path)) {
-                multi_val.push_back(vt.second.data());
-            }
-        }
-        catch(pt::ptree_error& err) {
-            common::logger::parse_config_error(err.what());
-            return false;
-        }
-        return true;
-    }
-    // 获取根节点
-    const pt::ptree get_root() 
-    {
-        return tree;
     }
 private:
     pt::ptree tree;
@@ -238,21 +171,9 @@ public:
         }
         return true;
     }
-
-    bool parse_xml_file(const string& xml_file_name)
+    void show_options()
     {
-        xml_config_ptr->parse(xml_file_name);
-        return true;
-    }
-    void show_options(bool format = false)
-    {
-        if (format) {
-            std::ostringstream oss;
-            oss << desc;
-            logger::log_info(format_desc(oss.str()));
-        }
-        else 
-            logger::log_info(desc);
+        logger::log_info(desc);
     }
 public:
     // 删除所有选项

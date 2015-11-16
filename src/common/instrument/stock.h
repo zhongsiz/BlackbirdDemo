@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年06月22日 星期一 00时13分41秒
-*Last Modified: 2015年08月09日 星期日 20时58分56秒
+*Last Modified: 2015年11月17日 星期二 01时10分09秒
 *Purpose:
 **/
 
@@ -74,12 +74,6 @@ struct market {
     double volumn;
     double turnover;
 };
-
-using display_stock_cb_t = std::function<void(std::vector<stock>&, const std::string&)>;
-using display_stock_basic_cb_t = std::function<void(std::vector<stock_basic>&)>;
-using display_market_cb_t = std::function<void(std::vector<market>&)>;
-
-using select_stock_cb_t = std::function<void(uint32_t, std::string&, std::vector<stock>&)>;
 
 }
 }
