@@ -1,7 +1,7 @@
 /**
 *Author: Steve Zhong
 *Creation Date: 2015年06月23日 星期二 22时30分03秒
-*Last Modified: 2015年09月23日 星期三 23时28分16秒
+*Last Modified: 2015年11月16日 星期一 23时33分48秒
 *Purpose: 配置器封装
 *    1. Boost::program_option封装
 *    2. Boost中xml解析器封装
@@ -25,8 +25,6 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/property_tree/json_parser.hpp>
-
-#include "patch/boost_patch.h"
 
 #include "logger.h"
 #include "infrastucture/uncopyable.h"

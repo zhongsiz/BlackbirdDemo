@@ -7,6 +7,11 @@
             <option_path>data/code/</option_path>
             <!-- 历史数据文件位置 -->
             <history_path>data/history/</history_path>
+            <markets>
+                <sh>s_sh000001</sh>
+                <sz>s_sz399001</sz>
+                <cyb>s_sz399006</cyb>
+            </markets>
         </code>
         <!-- 爬虫每次请求的股票信息数 -->
         <request_speed>300</request_speed>
