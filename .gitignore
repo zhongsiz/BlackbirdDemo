@@ -2,5 +2,4 @@
 .*.swp
 .*.swo
 # build dir
-!build/
 build/*
