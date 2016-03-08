@@ -43,10 +43,10 @@ INCLUDE_DIRECTORIES("${BOOST_PATH}")
 INCLUDE_DIRECTORIES("${CURL_PATH}")
 
 # 设置C++编译选项
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wno-unused-variable -Wno-unused-function -std=c++11" )
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -Wall -Wno-unused-variable -Wno-unused-function -std=c++11" )
 
 # 编译类型为Debug
-SET( CMAKE_BUILD_TYPE Debug )
+# SET( CMAKE_BUILD_TYPE Debug )
 
 # 编译目录
 ADD_SUBDIRECTORY(src/common)

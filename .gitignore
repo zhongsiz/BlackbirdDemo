@@ -1,5 +1,6 @@
-build/*
-!build/bin/*.xml
-!build/bin/*.ds
+# vim temp file
 .*.swp
 .*.swo
+# build dir
+!build/
+build/*
