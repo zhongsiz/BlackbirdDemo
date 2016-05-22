@@ -1,8 +1,12 @@
 ## Blackbird-A股神器(A Niubility China Stock Tools)
-Blackbird是一款茁壮成长的A股神器，目前支持Linux, 有任何建议或意见，欢迎联系[Steve](mailto:zhongsizhi@foxmail.com)。
+Blackbird是一款茁壮成长的A股神器, 有任何建议或意见，欢迎联系[Steve](mailto:zhongsizhi@foxmail.com)。
 
 ### Demo -- 行情模拟器(mdsim)
 ![Blackbird.gif](demo/mdsim.gif)
+
+### 更新
+
+* 2016-05-22: [A股上市公司简介](https://allall01.baidupcs.com/file/264458661b0648360dc20c082a031219?bkt=p3-1400264458661b0648360dc20c082a0312197dccbef90000004a1000&fid=2451167519-250528-707399430314362&time=1463910935&sign=FDTAXGERLBH-DCb740ccc5511e5e8fedcff06b081203-kYF4rh4eNg86oHhwcc%2Bi%2BbW7FZg%3D&to=wb&fm=Yan,B,M,mn&sta_dx=5&sta_cs=0&sta_ft=tar&sta_ct=0&fm2=Yangquan,B,M,mn&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=1400264458661b0648360dc20c082a0312197dccbef90000004a1000&sl=76480590&expires=8h&rt=sh&r=224789053&mlogid=3310704560960432128&vuk=2451167519&vbdid=2278995082&fin=company_basic.tar&fn=company_basic.tar&slt=pm&uta=0&rtype=1&iv=0&isw=0&dp-logid=3310704560960432128&dp-callid=0.1.1)
 
 ### Build && Usage
 
